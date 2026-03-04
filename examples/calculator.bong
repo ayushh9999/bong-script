@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────
+# 🧮 Calculator (ক্যালকুলেটর)
+# Basic arithmetic calculator in bongScript
+# ─────────────────────────────────────────────
+
+dekhao("╔═══════════════════════════════════════╗")
+dekhao("║     🧮 bongScript Calculator          ║")
+dekhao("╚═══════════════════════════════════════╝")
+
+# ── Arithmetic Functions ──
+
+kaj jog(a, b)
+    ferao a + b
+ses
+
+kaj biyog(a, b)
+    ferao a - b
+ses
+
+kaj gun(a, b)
+    ferao a * b
+ses
+
+kaj bhag(a, b)
+    jodi b == 0 tahole
+        dekhao("❌ Shunno diye bhag kora jay na!")
+        ferao khali
+    ses
+    ferao a / b
+ses
+
+kaj power(base, exp)
+    jodi exp == 0 tahole
+        ferao 1
+    ses
+    dhoro result = 1
+    dhoro i = 0
+    jotokhon i < exp tahole
+        dhoro result = result * base
+        dhoro i = i + 1
+    ses
+    ferao result
+ses
+
+kaj factorial(n)
+    jodi n <= 1 tahole
+        ferao 1
+    ses
+    ferao n * factorial(n - 1)
+ses
+
+# ── Demo ──
+dekhao("")
+dekhao("═══ Arithmetic ═══")
+dekhao("  15 + 27 =", jog(15, 27))
+dekhao("  100 - 37 =", biyog(100, 37))
+dekhao("  12 * 8 =", gun(12, 8))
+dekhao("  144 / 12 =", bhag(144, 12))
+
+dekhao("")
+dekhao("═══ Power (Ghat) ═══")
+dekhao("  2 ^ 10 =", power(2, 10))
+dekhao("  5 ^ 3 =", power(5, 3))
+
+dekhao("")
+dekhao("═══ Factorial (Kramogunit) ═══")
+dekhao("  5! =", factorial(5))
+dekhao("  10! =", factorial(10))
+
+dekhao("")
+dekhao("═══ Complex Expression ═══")
+dhoro result = jog(gun(3, 4), biyog(10, 5))
+dekhao("  (3 * 4) + (10 - 5) =", result)

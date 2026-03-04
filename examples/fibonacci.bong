@@ -1,0 +1,56 @@
+# ─────────────────────────────────────────────
+# 📐 Fibonacci Sequence (ফিবোনাচ্চি ধারা)
+# ─────────────────────────────────────────────
+
+dekhao("═══ Fibonacci Dhara ═══")
+dekhao("")
+
+# ── Recursive Fibonacci ──
+kaj fibonacci(n)
+    jodi n <= 0 tahole
+        ferao 0
+    ses
+    jodi n == 1 tahole
+        ferao 1
+    ses
+    ferao fibonacci(n - 1) + fibonacci(n - 2)
+ses
+
+# ── Print first 15 numbers ──
+dekhao("Prothom 15 ta Fibonacci sonkhya:")
+dekhao("")
+
+dhoro i = 0
+jotokhon i < 15 tahole
+    dhoro result = fibonacci(i)
+    dekhao("  fibonacci(" , i , ") =", result)
+    dhoro i = i + 1
+ses
+
+dekhao("")
+
+# ── Iterative version (faster!) ──
+kaj fibonacci_fast(n)
+    jodi n <= 0 tahole
+        ferao 0
+    ses
+    jodi n == 1 tahole
+        ferao 1
+    ses
+
+    dhoro a = 0
+    dhoro b = 1
+    dhoro count = 2
+
+    jotokhon count <= n tahole
+        dhoro temp = a + b
+        dhoro a = b
+        dhoro b = temp
+        dhoro count = count + 1
+    ses
+
+    ferao b
+ses
+
+dekhao("═══ Fast Fibonacci (50th number) ═══")
+dekhao("  fibonacci_fast(50) =", fibonacci_fast(50))

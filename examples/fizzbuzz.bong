@@ -1,0 +1,21 @@
+# ─────────────────────────────────────────────
+# 🎯 FizzBuzz in bongScript
+# Classic programming challenge, Bengali style!
+# ─────────────────────────────────────────────
+
+dekhao("═══ FizzBuzz (1 theke 30) ═══")
+dekhao("")
+
+dhoro i = 1
+jotokhon i <= 30 tahole
+    jodi i % 15 == 0 tahole
+        dekhao(i, "→ 🎉 BongBuzz!")
+    nahole jodi i % 3 == 0 tahole
+        dekhao(i, "→ 🔔 Bong!")
+    nahole jodi i % 5 == 0 tahole
+        dekhao(i, "→ ✨ Buzz!")
+    nahole
+        dekhao(i)
+    ses
+    dhoro i = i + 1
+ses

@@ -1,0 +1,5 @@
+dhoro a = 1
+dhoro b = 2
+
+dhoro sum = a+b
+dekhao sum

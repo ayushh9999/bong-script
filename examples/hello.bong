@@ -1,0 +1,20 @@
+# ─────────────────────────────────────────────
+# 🙏 নমস্কার! (Hello World in bongScript)
+# ─────────────────────────────────────────────
+
+dekhao("🙏 নমস্কার, পৃথিবী!")
+dekhao("   Nomoskar, Prithibi!")
+dekhao("   Hello, World!")
+dekhao("")
+
+# ── Variables (পরিবর্তনশীল) ──
+dhoro naam = "bongScript"
+dhoro version = 1.0
+
+dekhao("ভাষা:", naam)
+dekhao("Version:", version)
+dekhao("")
+
+# ── You can also use it without parentheses! ──
+dekhao "Eta bina bracket e o kaj kore!"
+dekhao "Abar dekha hobe! 👋"

@@ -1,0 +1,200 @@
+# ─────────────────────────────────────────────
+# 🎯 bongScript Feature Showcase
+# All language features demonstrated
+# ─────────────────────────────────────────────
+
+# ═══════════════════════════════════════════
+# 1. Variables & Data Types (ধরো)
+# ═══════════════════════════════════════════
+dekhao("═══ 1. Variables & Data Types ═══")
+
+dhoro naam = "Rahim"
+dhoro boyosh = 25
+dhoro uponnash = 3.14
+dhoro active = sotti
+dhoro address = khali
+
+dekhao("  Naam:", naam)
+dekhao("  Boyosh:", boyosh)
+dekhao("  Pi:", uponnash)
+dekhao("  Active:", active)
+dekhao("  Address:", address)
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 2. Arithmetic (গণিত)
+# ═══════════════════════════════════════════
+dekhao("═══ 2. Arithmetic ═══")
+
+dhoro a = 10
+dhoro b = 3
+dekhao("  a =", a, ", b =", b)
+dekhao("  a + b =", a + b)
+dekhao("  a - b =", a - b)
+dekhao("  a * b =", a * b)
+dekhao("  a / b =", a / b)
+dekhao("  a % b =", a % b)
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 3. Strings (লিখন)
+# ═══════════════════════════════════════════
+dekhao("═══ 3. Strings ═══")
+
+dhoro first = "নমস্কার"
+dhoro last = "বিশ্ব"
+dhoro full = first + ", " + last + "!"
+dekhao("  ", full)
+dekhao("  Repeat:", "বং! " * 3)
+dekhao("  Length:", dorjho(full))
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 4. If/Else (যদি/নাহলে)
+# ═══════════════════════════════════════════
+dekhao("═══ 4. If/Else ═══")
+
+dhoro marks = 78
+
+jodi marks >= 90 tahole
+    dekhao("  Grade: A+ (অসাধারণ!)")
+nahole jodi marks >= 80 tahole
+    dekhao("  Grade: A (খুব ভালো!)")
+nahole jodi marks >= 70 tahole
+    dekhao("  Grade: B (ভালো!)")
+nahole jodi marks >= 60 tahole
+    dekhao("  Grade: C (মোটামুটি)")
+nahole
+    dekhao("  Grade: F (আরো পরিশ্রম করো!)")
+ses
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 5. Loops (লুপ)
+# ═══════════════════════════════════════════
+dekhao("═══ 5. While Loop ═══")
+
+dhoro count = 1
+dekhao("  Counting:")
+jotokhon count <= 5 tahole
+    dekhao("    →", count)
+    dhoro count = count + 1
+ses
+
+// Loop with break
+dekhao("  Loop with break:")
+dhoro n = 1
+jotokhon sotti tahole
+    jodi n > 3 tahole
+        dekhao("    Thami! (Breaking!)")
+        thamo
+    ses
+    dekhao("    n =", n)
+    dhoro n = n + 1
+ses
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 6. Functions (কাজ)
+# ═══════════════════════════════════════════
+dekhao("═══ 6. Functions ═══")
+
+kaj shuvo_sondha(naam)
+    dekhao("  🌅 শুভ সন্ধ্যা,", naam, "!")
+ses
+
+kaj boro(a, b)
+    jodi a > b tahole
+        ferao a
+    ses
+    ferao b
+ses
+
+kaj abs_val(x)
+    jodi x < 0 tahole
+        ferao -x
+    ses
+    ferao x
+ses
+
+shuvo_sondha("Ayush")
+dekhao("  boro(15, 27) =", boro(15, 27))
+dekhao("  abs_val(-42) =", abs_val(-42))
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 7. Lists (তালিকা)
+# ═══════════════════════════════════════════
+dekhao("═══ 7. Lists ═══")
+
+dhoro fruits = ["আম", "কাঁঠাল", "লিচু", "জাম"]
+dekhao("  Fruits:", fruits)
+dekhao("  First:", fruits[0])
+dekhao("  Last:", fruits[3])
+dekhao("  Count:", dorjho(fruits))
+dekhao("")
+
+dhoro numbers = [10, 20, 30, 40, 50]
+kaj jogfol(list, size)
+    dhoro total = 0
+    dhoro idx = 0
+    jotokhon idx < size tahole
+        dhoro total = total + list[idx]
+        dhoro idx = idx + 1
+    ses
+    ferao total
+ses
+
+dekhao("  Numbers:", numbers)
+dekhao("  Sum:", jogfol(numbers, dorjho(numbers)))
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 8. Logical Operators (যুক্তি)
+# ═══════════════════════════════════════════
+dekhao("═══ 8. Logical Operators ═══")
+
+dhoro x = 15
+dekhao("  x =", x)
+dekhao("  x > 10 ebong x < 20:", x > 10 ebong x < 20)
+dekhao("  x == 5 othoba x == 15:", x == 5 othoba x == 15)
+dekhao("  na (x == 0):", na (x == 0))
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 9. Recursion (পুনরাবৃত্তি)
+# ═══════════════════════════════════════════
+dekhao("═══ 9. Recursion ═══")
+
+kaj gcd(a, b)
+    jodi b == 0 tahole
+        ferao a
+    ses
+    ferao gcd(b, a % b)
+ses
+
+kaj is_even(n)
+    ferao n % 2 == 0
+ses
+
+dekhao("  GCD(48, 18) =", gcd(48, 18))
+dekhao("  GCD(100, 75) =", gcd(100, 75))
+dekhao("  is_even(4) =", is_even(4))
+dekhao("  is_even(7) =", is_even(7))
+dekhao("")
+
+# ═══════════════════════════════════════════
+# 10. Type Checking (ধরন)
+# ═══════════════════════════════════════════
+dekhao("═══ 10. Type Checking ═══")
+
+dekhao("  dhoron(42) =", dhoron(42))
+dekhao("  dhoron(3.14) =", dhoron(3.14))
+dekhao('  dhoron("hello") =', dhoron("hello"))
+dekhao("  dhoron(sotti) =", dhoron(sotti))
+dekhao("  dhoron(khali) =", dhoron(khali))
+dekhao("  dhoron([1,2]) =", dhoron([1, 2]))
+dekhao("")
+
+dekhao("🎉 Shob feature successfully demonstrate kora holo!")
+dekhao("   All features demonstrated successfully!")
