@@ -1,6 +1,6 @@
 # BongScript
 
-### A Bengali Programming Language | বাংলায় প্রোগ্রামিং ভাষা
+### A Bengali Programming Language
 
 <div align="center">
 
