@@ -1,4 +1,4 @@
-# 🙏 বংScript (bongScript)
+# BongScript
 
 ### A Bengali Programming Language | বাংলায় প্রোগ্রামিং ভাষা
 
